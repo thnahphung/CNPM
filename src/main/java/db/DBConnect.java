@@ -19,13 +19,13 @@ public class DBConnect {
         }
     }
 
-    public static DBConnect getInstall() {
+    public static DBConnect getInstance() {
         if(install == null) install = new DBConnect();
         return install;
     }
 
     //tạo đối tượng statement
-    public Statement get() {
+    public Statement getStatement() {
         if(connect == null) return null;
         try {
             return connect.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
@@ -34,8 +34,27 @@ public class DBConnect {
         }
     }
 
+    private void connect() throws SQLException, ClassNotFoundException {
+        if (connect == null || connect.isClosed()) {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connect = DriverManager.getConnection(url, user, pass);
+        }
+    }
+
+    public Connection get() {
+        try {
+            connect();
+            return connect;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
     public static void main(String[] args) {
-        Statement statement = DBConnect.getInstall().get();
+        Statement statement = DBConnect.getInstance().getStatement();
         if(statement != null)
             try {
                 ResultSet rs = statement.executeQuery("select * from vendor");

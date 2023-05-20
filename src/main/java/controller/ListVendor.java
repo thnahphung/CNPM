@@ -1,7 +1,7 @@
 package controller;
 
 import db.JDBiConnector;
-import model.Vendor;
+import bean.Vendor;
 import service.VendorService;
 
 import javax.servlet.ServletException;

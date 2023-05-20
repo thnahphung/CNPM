@@ -97,6 +97,7 @@ ul, ol {
 	font-size: 14px;
 	color: #dfa974;
 	font-weight: 700;
+	text-transform: uppercase;
 	letter-spacing: 2px;
 }
 .section-title h2 {
@@ -127,6 +128,7 @@ ul, ol {
 	display: inline-block;
 	font-size: 13px;
 	color: #ffffff;
+	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-weight: 700;
 	position: relative;
@@ -320,6 +322,7 @@ ul, ol {
 	padding: 16px 28px 15px;
 	background: #dfa974;
 	color: #ffffff;
+	text-transform: uppercase;
 	letter-spacing: 2px;
 }
 .top-nav .tn-right .language-option {
@@ -343,6 +346,7 @@ ul, ol {
 .top-nav .tn-right .language-option span {
 	font-size: 16px;
 	color: #19191a;
+	text-transform: uppercase;
 	font-weight: 500;
 }
 .top-nav .tn-right .language-option .flag-dropdown {
@@ -368,6 +372,7 @@ ul, ol {
 }
 .top-nav .tn-right .language-option .flag-dropdown ul li a {
 	font-size: 14px;
+	text-transform: uppercase;
 	font-weight: 500;
 	color: #19191a;
 	-webkit-transition: all 0.3s;
@@ -540,6 +545,7 @@ ul, ol {
 	border-radius: 2px;
 	font-size: 16px;
 	color: #19191a;
+	text-transform: uppercase;
 	font-weight: 500;
 	padding-left: 20px;
 }
@@ -580,6 +586,7 @@ ul, ol {
 .booking-form form .select-option .nice-select span {
 	font-size: 16px;
 	color: #19191a;
+	text-transform: uppercase;
 	font-weight: 500;
 }
 .booking-form form .select-option .nice-select .list {
@@ -589,6 +596,7 @@ ul, ol {
 .booking-form form button {
 	display: block;
 	font-size: 14px;
+	text-transform: uppercase;
 	border: 1px solid #dfa974;
 	border-radius: 2px;
 	color: #dfa974;
@@ -711,7 +719,7 @@ ul, ol {
 	transition: all 0.3s;
 }
 /*------------------------
-  Home Page Room Section
+  Home Page Room Section 
 -------------------------*/
 
 .hp-room-items {
@@ -896,6 +904,7 @@ ul, ol {
 .footer-section .footer-text .ft-contact h6 {
 	font-size: 14px;
 	color: #dfa974;
+	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 3px;
 	font-family: "Cabin", sans-serif;
@@ -910,6 +919,7 @@ ul, ol {
 .footer-section .footer-text .ft-newslatter h6 {
 	font-size: 14px;
 	color: #dfa974;
+	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 3px;
 	font-family: "Cabin", sans-serif;
@@ -995,7 +1005,7 @@ ul, ol {
 	position: absolute;
 	right: -13px;
 	top: 1px;
-	content: "ï„…";
+	content: "";
 	font-size: 18px;
 	font-family: "FontAwesome";
 	color: #aaaab3;
@@ -1155,12 +1165,6 @@ ul, ol {
 .room-item img {
 	min-width: 100%;
 }
-
-img.product-image {
-	width: 200px;
-	height: 200px;
-	object-fit: cover;
-}
 .room-item .ri-text {
 	border: 1px solid #ebebeb;
 	border-top: none;
@@ -1256,6 +1260,7 @@ img.product-image {
 	display: inline-block;
 	color: #ffffff;
 	font-size: 13px;
+	text-transform: uppercase;
 	font-weight: 700;
 	background: #dfa974;
 	padding: 14px 28px 13px;
@@ -1328,6 +1333,7 @@ img.product-image {
 .rd-reviews .review-item .ri-text span {
 	font-size: 12px;
 	color: #dfa974;
+	text-transform: uppercase;
 	letter-spacing: 3px;
 }
 .rd-reviews .review-item .ri-text .rating {
@@ -1420,6 +1426,7 @@ img.product-image {
 .review-add .ra-form button {
 	font-size: 13px;
 	font-weight: 700;
+	text-transform: uppercase;
 	color: #ffffff;
 	letter-spacing: 2px;
 	background: #dfa974;
@@ -1434,42 +1441,43 @@ img.product-image {
 	color: #19191a;
 	margin-bottom: 30px;
 }
-.room-booking form .check-date {
+.room-booking .form .check-date {
 	position: relative;
 	margin-bottom: 15px;
 }
-.room-booking form .check-date label {
+.room-booking .form .check-date label {
 	font-size: 14px;
 	color: #707079;
 	display: block;
 	margin-bottom: 10px;
 }
-.room-booking form .check-date input {
+.room-booking .form .check-date input {
 	width: 100%;
 	height: 50px;
 	border: 1px solid #ebebeb;
 	border-radius: 2px;
 	font-size: 16px;
 	color: #19191a;
+	text-transform: uppercase;
 	font-weight: 500;
 	padding-left: 20px;
 }
-.room-booking form .check-date i {
+.room-booking .form .check-date i {
 	color: #dfa974;
 	position: absolute;
 	right: 18px;
 	bottom: 17px;
 }
-.room-booking form .select-option {
+.room-booking .form .select-option {
 	margin-bottom: 15px;
 }
-.room-booking form .select-option label {
+.room-booking .form .select-option label {
 	font-size: 14px;
 	color: #707079;
 	display: block;
 	margin-bottom: 10px;
 }
-.room-booking form .select-option .nice-select {
+.room-booking .form .select-option .nice-select {
 	border-radius: 2px;
 	border: 1px solid #ebebeb;
 	height: 50px;
@@ -1479,7 +1487,7 @@ img.product-image {
 	width: 100%;
 	float: none;
 }
-.room-booking form .select-option .nice-select:after {
+.room-booking .form .select-option .nice-select:after {
 	border-bottom: 2px solid #dfa974;
 	border-right: 2px solid #dfa974;
 	height: 10px;
@@ -1488,18 +1496,20 @@ img.product-image {
 	width: 10px;
 	top: 36%;
 }
-.room-booking form .select-option .nice-select span {
+.room-booking .form .select-option .nice-select span {
 	font-size: 16px;
 	color: #19191a;
+	text-transform: uppercase;
 	font-weight: 500;
 }
-.room-booking form .select-option .nice-select .list {
+.room-booking .form .select-option .nice-select .list {
 	margin-top: 0;
 	width: 100%;
 }
-.room-booking form button {
+.room-booking .form button {
 	display: block;
 	font-size: 14px;
+	text-transform: uppercase;
 	border: 1px solid #dfa974;
 	border-radius: 2px;
 	color: #dfa974;
@@ -1538,6 +1548,7 @@ img.product-image {
 	display: inline-block;
 	color: #ffffff;
 	font-size: 12px;
+	text-transform: uppercase;
 	letter-spacing: 1px;
 	background: #dfa974;
 	padding: 3px 10px;
@@ -1553,6 +1564,7 @@ img.product-image {
 .blog-item .bi-text .b-time {
 	font-size: 12px;
 	color: #ffffff;
+	text-transform: uppercase;
 	letter-spacing: 3px;
 }
 .load-more {
@@ -1578,6 +1590,7 @@ img.product-image {
 	color: #ffffff;
 	background: #dfa974;
 	font-weight: 500;
+	text-transform: uppercase;
 	letter-spacing: 1px;
 	display: inline-block;
 	padding: 4px 16px;
@@ -1601,6 +1614,7 @@ img.product-image {
 	margin-right: 0;
 }
 .bd-hero-text ul li.b-time {
+	text-transform: uppercase;
 }
 /*---------------------
   Blog Details Section
@@ -1661,6 +1675,7 @@ img.product-image {
 	color: #707079;
 	background: #ebebeb;
 	font-weight: 500;
+	text-transform: uppercase;
 	letter-spacing: 1px;
 	display: inline-block;
 	padding: 4px 16px;
@@ -1742,6 +1757,7 @@ img.product-image {
 .blog-details-text .comment-option .single-comment-item .sc-text span {
 	font-size: 12px;
 	color: #dfa974;
+	text-transform: uppercase;
 	letter-spacing: 2px;
 }
 .blog-details-text .comment-option .single-comment-item .sc-text h5 {
@@ -1759,6 +1775,7 @@ img.product-image {
 	color: #19191a;
 	font-size: 14px;
 	font-weight: 700;
+	text-transform: uppercase;
 	letter-spacing: 1px;
 	padding: 5px 24px;
 	border: 1px solid #F9EEE3;
@@ -1814,6 +1831,7 @@ img.product-image {
 .blog-details-text .leave-comment .comment-form button {
 	font-size: 13px;
 	font-weight: 700;
+	text-transform: uppercase;
 	color: #ffffff;
 	letter-spacing: 2px;
 	background: #dfa974;
@@ -1915,6 +1933,7 @@ img.product-image {
 .contact-form button {
 	font-size: 13px;
 	font-weight: 700;
+	text-transform: uppercase;
 	color: #ffffff;
 	letter-spacing: 2px;
 	background: #dfa974;
@@ -2064,6 +2083,7 @@ img.product-image {
 	.offcanvas-menu-wrapper .header-configure-area .language-option span {
 		font-size: 16px;
 		color: #19191a;
+		text-transform: uppercase;
 		font-weight: 500;
 	}
 	.offcanvas-menu-wrapper .header-configure-area .language-option .flag-dropdown {
@@ -2089,6 +2109,7 @@ img.product-image {
 	}
 	.offcanvas-menu-wrapper .header-configure-area .language-option .flag-dropdown ul li a {
 		font-size: 14px;
+		text-transform: uppercase;
 		font-weight: 500;
 		color: #19191a;
 		-webkit-transition: all 0.3s;
@@ -2105,6 +2126,7 @@ img.product-image {
 		padding: 16px 28px 15px;
 		background: #dfa974;
 		color: #ffffff;
+		text-transform: uppercase;
 		letter-spacing: 2px;
 	}
 	.offcanvas-menu-wrapper .mainmenu {
@@ -2312,4 +2334,29 @@ img.product-image {
 	.blog-details-text .comment-option .single-comment-item .sc-text a {
 		margin-bottom: 10px;
 	}
+}
+
+#button{
+	display: inline-block;
+	color: #ffffff;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 700;
+	background: #94785c;
+	padding: 14px 28px 13px;
+	margin-top: 20px;
+}
+
+#button a{
+	color: white;
+}
+
+.room-item img {
+	min-width: 100%;
+}
+
+img.product-image {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
 }

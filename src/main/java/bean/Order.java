@@ -1,4 +1,4 @@
-package model;
+package bean;
 
 public class Order {
     private int id;
@@ -6,15 +6,18 @@ public class Order {
     private int user_id;
     private int room_id;
 
+    private int time_id;
+
     public Order() {
 
     }
 
-    public Order(int id, int total, int user_id, int room_id) {
+    public Order(int id, int total, int user_id, int room_id, int timeId) {
         this.id = id;
         this.total = total;
         this.user_id = user_id;
         this.room_id = room_id;
+        time_id = timeId;
     }
 
     public int getId() {
@@ -47,6 +50,14 @@ public class Order {
 
     public void setRoom_id(int room_id) {
         this.room_id = room_id;
+    }
+
+    public int getTime_id() {
+        return time_id;
+    }
+
+    public void setTime_id(int time_id) {
+        this.time_id = time_id;
     }
 }
 
