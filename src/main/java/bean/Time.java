@@ -1,4 +1,4 @@
-package model;
+package bean;
 
 import java.time.LocalDateTime;
 
@@ -11,6 +11,12 @@ public class Time {
 
     public Time(int id, LocalDateTime startTime, LocalDateTime endTime, int room_id) {
         this.id = id;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.room_id = room_id;
+    }
+
+    public Time(LocalDateTime startTime, LocalDateTime endTime, int room_id) {
         this.startTime = startTime;
         this.endTime = endTime;
         this.room_id = room_id;

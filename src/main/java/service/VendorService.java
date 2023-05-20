@@ -1,7 +1,7 @@
 package service;
 
 import db.JDBiConnector;
-import model.Vendor;
+import bean.Vendor;
 
 import java.util.List;
 import java.util.stream.Collectors;

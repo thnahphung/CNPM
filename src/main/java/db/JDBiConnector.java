@@ -1,7 +1,7 @@
 package db;
 
 import com.mysql.cj.jdbc.MysqlDataSource;
-import model.Vendor;
+import bean.Vendor;
 import org.jdbi.v3.core.Jdbi;
 
 import java.sql.SQLException;

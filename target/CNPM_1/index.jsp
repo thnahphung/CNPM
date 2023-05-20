@@ -647,7 +647,7 @@
 </footer>
 <!-- Footer Section End -->
 
-<!-- Search model Begin -->
+<!-- Search bean Begin -->
 <div class="search-model">
     <div class="h-100 d-flex align-items-center justify-content-center">
         <div class="search-close-switch"><i class="icon_close"></i></div>
@@ -656,7 +656,7 @@
         </form>
     </div>
 </div>
-<!-- Search model end -->
+<!-- Search bean end -->
 
 <!-- Js Plugins -->
 <script src="js/jquery-3.3.1.min.js"></script>
