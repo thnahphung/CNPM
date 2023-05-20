@@ -65,7 +65,7 @@
   <nav class="mainmenu mobile-menu">
     <ul>
       <li class="active"><a href="./index.jsp">Home</a></li>
-      <li><a href="./rooms.html">Rooms</a></li>
+      <li><a href="./vendor">Vendor</a></li>
       <li><a href="about-us.jsp">About Us</a></li>
       <li><a href="./pages.html">Pages</a>
         <ul class="dropdown">
@@ -143,7 +143,7 @@
             <nav class="mainmenu">
               <ul>
                 <li class="active"><a href="./index.jsp">Home</a></li>
-                <li><a href="./rooms.html">Rooms</a></li>
+                <li><a href="./vendor">Vendor</a></li>
                 <li><a href="about-us.jsp">About Us</a></li>
                 <li><a href="./pages.html">Pages</a>
                   <ul class="dropdown">
@@ -157,9 +157,15 @@
                 <li><a href="./contact.html">Contact</a></li>
               </ul>
             </nav>
-            <div class="nav-right search-switch">
-              <i class="icon_search"></i>
-            </div>
+            <!--- form search --->
+            <form class="search-form" action="vendor" method="GET">
+              <div class="input-group">
+                <input class="form-control" type="text" name="searchName" placeholder="Enter product name...">
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -185,8 +191,8 @@
           <h3>Register</h3>
           <form action="register" method="post">
             <div class="check-date">
-              <label for="fullname">Full name:</label>
-              <input name="fullname" type="text" class="fullname" id="fullname" required>
+              <label for="full_name">Full name:</label>
+              <input name="full_name" type="text" class="full_name" id="full_name" required>
               <%--              <i class="icon_calendar"></i>--%>
             </div>
             <div class="check-date">
@@ -209,11 +215,6 @@
               <input name="pass" type="password" class="pass" id="pass" required>
               <%--              <i class="icon_calendar"></i>--%>
             </div>
-<%--            <div class="check-date">--%>
-<%--              <label for="repass">Password</label>--%>
-<%--              <input name="repass" type="password" class="repass" id="repass" required>--%>
-<%--              &lt;%&ndash;              <i class="icon_calendar"></i>&ndash;%&gt;--%>
-<%--            </div>--%>
             <button type="submit">Register</button>
           </form>
         </div>
