@@ -65,7 +65,7 @@
   <nav class="mainmenu mobile-menu">
     <ul>
       <li class="active"><a href="./index.jsp">Home</a></li>
-      <li><a href="./rooms.html">Rooms</a></li>
+      <li><a href="./vendor">Vendor</a></li>
       <li><a href="about-us.jsp">About Us</a></li>
       <li><a href="./pages.html">Pages</a>
         <ul class="dropdown">
@@ -143,7 +143,7 @@
             <nav class="mainmenu">
               <ul>
                 <li class="active"><a href="./index.jsp">Home</a></li>
-                <li><a href="./rooms.html">Rooms</a></li>
+                <li><a href="./vendor">Vendor</a></li>
                 <li><a href="about-us.jsp">About Us</a></li>
                 <li><a href="./pages.html">Pages</a>
                   <ul class="dropdown">
@@ -157,9 +157,15 @@
                 <li><a href="./contact.html">Contact</a></li>
               </ul>
             </nav>
-            <div class="nav-right search-switch">
-              <i class="icon_search"></i>
-            </div>
+            <!--- form search --->
+            <form class="search-form" action="vendor" method="GET">
+              <div class="input-group">
+                <input class="form-control" type="text" name="searchName" placeholder="Enter product name...">
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -186,7 +192,7 @@
           <form action="login" method="post">
             <div class="check-date">
               <label for="username">User name:</label>
-              <input  name="username" type="text" class="username" id="username" >
+              <input  name="username" type="text" class="username" id="username" required>
             </div>
             <div class="check-date">
               <label for="pass">Password:</label>

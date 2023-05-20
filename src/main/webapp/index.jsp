@@ -5,6 +5,7 @@
   Time: 11:30 PM
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page import="bean.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -110,21 +111,34 @@
                 <div class="col-lg-6">
                     <div class="tn-right">
                         <div class="top-social">
+                            <%
+                                User user = (User) session.getAttribute("user");
+                                if (user == null) {
+                            %>
+                            <%--                            Chức năng đăng nhập: 1. Chọn đăng nhập--%>
                             <a href="login.jsp"><i class="fa fa-user"></i> Login</a>
+                            <%--                            Chức năng đăng ký: 1 Chọn đăng ký--%>
                             <a href="register.jsp"><i class="fa fa-user-plus"></i> Register</a>
 
                         </div>
                         <a href="#" class="bk-btn">Booking Now</a>
-                        <div class="language-option">
-                            <img src="img/flag.jpg" alt="">
-                            <span>EN <i class="fa fa-angle-down"></i></span>
-                            <div class="flag-dropdown">
-                                <ul>
-                                    <li><a href="#">Zi</a></li>
-                                    <li><a href="#">Fr</a></li>
-                                </ul>
-                            </div>
+                        <%} else {%>
+                        <div class="top-social">
+                            <a href="logout"><i class="fa fa-user-plus"></i> Logout</a>
                         </div>
+                        <%--                        <a href="#" class="bk-btn">Booking Now</a>--%>
+                        <div class="language-option">
+                            <%--                            <img src="img/flag.jpg" alt="">--%>
+                            <span>Hi</span>
+                            <b><%=user.getName()%></b>
+                            <%--                            <div class="flag-dropdown">--%>
+                            <%--                                <ul>--%>
+                            <%--                                    <li><a href="#">Zi</a></li>--%>
+                            <%--                                    <li><a href="#">Fr</a></li>--%>
+                            <%--                                </ul>--%>
+                            <%--                            </div>--%>
+                        </div>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -144,6 +158,9 @@
                     <div class="nav-menu">
                         <nav class="mainmenu">
                             <ul>
+                                <%
+                                    if(  user == null || user!= null && user.getVariety() == 1){
+                                %>
                                 <li class="active"><a href="index.jsp">Home</a></li>
                                 <li>
                                     <a href="vendor">Vendor</a>
@@ -159,6 +176,12 @@
                                 </li>
                                 <li><a href="./blog.html">News</a></li>
                                 <li><a href="./contact.html">Contact</a></li>
+                                <%
+                                } else if(user!= null && user.getVariety() == 0){
+                                %>
+                                <li class="active"><a href="./index.jsp">Home</a></li>
+                                <li><a target="_blank" href="./admin.jsp">Admin</a></li>
+                                <%}%>
                             </ul>
                         </nav>
 <%--                        <div class="nav-right search-switch">--%>

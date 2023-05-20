@@ -1,5 +1,6 @@
 <<%@ page import="bean.Vendor" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="bean.User" %><%--
   Created by IntelliJ IDEA.
   User: DELL
   Date: 4/28/2023
@@ -112,22 +113,34 @@
                 <div class="col-lg-6">
                     <div class="tn-right">
                         <div class="top-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-tripadvisor"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <%
+                                User user = (User) session.getAttribute("user");
+                                if (user == null) {
+                            %>
+                            <%--                            Chức năng đăng nhập: 1. Chọn đăng nhập--%>
+                            <a href="login.jsp"><i class="fa fa-user"></i> Login</a>
+                            <%--                            Chức năng đăng ký: 1 Chọn đăng ký--%>
+                            <a href="register.jsp"><i class="fa fa-user-plus"></i> Register</a>
+
                         </div>
                         <a href="#" class="bk-btn">Booking Now</a>
-                        <div class="language-option">
-                            <img src="img/flag.jpg" alt="">
-                            <span>EN <i class="fa fa-angle-down"></i></span>
-                            <div class="flag-dropdown">
-                                <ul>
-                                    <li><a href="#">Zi</a></li>
-                                    <li><a href="#">Fr</a></li>
-                                </ul>
-                            </div>
+                        <%} else {%>
+                        <div class="top-social">
+                            <a href="logout"><i class="fa fa-user-plus"></i> Logout</a>
                         </div>
+                        <%--                        <a href="#" class="bk-btn">Booking Now</a>--%>
+                        <div class="language-option">
+                            <%--                            <img src="img/flag.jpg" alt="">--%>
+                            <span>Hi</span>
+                            <b><%=user.getName()%></b>
+                            <%--                            <div class="flag-dropdown">--%>
+                            <%--                                <ul>--%>
+                            <%--                                    <li><a href="#">Zi</a></li>--%>
+                            <%--                                    <li><a href="#">Fr</a></li>--%>
+                            <%--                                </ul>--%>
+                            <%--                            </div>--%>
+                        </div>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -147,23 +160,33 @@
                     <div class="nav-menu">
                         <nav class="mainmenu">
                             <ul>
+                                <%--                                5.2 Kiểm tra phân quyền--%>
+                                <%--                                5.2.2 Variety là 1--%>
+                                <%
+                                    if(  user == null || user!= null && user.getVariety() == 1){
+                                %>
+                                <%--                            5.2.2.1 Hiển thị giao diện User--%>
                                 <li><a href="./index.jsp">Home</a></li>
-                                <li class="active">
-
-                                    <a href="vendor">Vendor</a>
-
-                            </li>
+                                <li class="active"><a href="./vendor">Vendor</a></li>
                                 <li><a href="about-us.jsp">About Us</a></li>
                                 <li><a href="./pages.html">Pages</a>
                                     <ul class="dropdown">
-                                        <li><a href="./room-details.jsp">Room Details</a></li>
-                                        <li><a href="./blog-details.jsp">Blog Details</a></li>
+                                        <li><a href="./room-details.html">Room Details</a></li>
+                                        <li><a href="./blog-details.html">Blog Details</a></li>
                                         <li><a href="#">Family Room</a></li>
                                         <li><a href="#">Premium Room</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="./blog.jsp">News</a></li>
-                                <li><a href="./contact.jsp">Contact</a></li>
+                                <li><a href="./blog.html">News</a></li>
+                                <li><a href="./contact.html">Contact</a></li>
+                                <%--                            5.2.1 Variety là 0--%>
+                                <%
+                                } else if(user!= null && user.getVariety() == 0){
+                                %>
+                                <%--                            5.2.1.1 Hiển thị giao diện Admin--%>
+                                <li class="active"><a href="./index.jsp">Home</a></li>
+                                <li><a target="_blank" href="./admin.jsp">Admin</a></li>
+                                <%}%>
                             </ul>
                         </nav>
 <%--                        <div class="nav-right search-switch">--%>
